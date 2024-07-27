@@ -1,0 +1,1 @@
+import React from 'react';interface ContentBackgroundProps {	children: React.ReactNode;	className?: string;}const ContentBackground: React.FC<ContentBackgroundProps> = ({ children, className = '' }) => {	return (		<div className={`min-h-screen bg-base-200 flex items-center justify-center ${className}`}>			{children}		</div>	);};export default ContentBackground;

@@ -1,0 +1,1 @@
+import React from 'react';interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {	name: string;}const Input: React.FC<InputProps> = ({ name, ...rest }) => {	return <input id={name} name={name} className="input input-bordered" {...rest} />;};export default Input;

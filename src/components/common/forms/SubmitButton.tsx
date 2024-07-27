@@ -1,0 +1,1 @@
+import React from 'react';interface SubmitButtonProps {	text: string;}const SubmitButton: React.FC<SubmitButtonProps> = ({ text }) => (	<div className="form-control mt-8">		<button type="submit" className="btn btn-primary">{text}</button>	</div>);export default SubmitButton;

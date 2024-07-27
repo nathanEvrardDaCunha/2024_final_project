@@ -1,0 +1,1 @@
+import React from 'react';interface CardTitleCenteredProps {	text: string;}const CardTitleCentered: React.FC<CardTitleCenteredProps> = ({ text }) => (	<h2 className="card-title justify-center mb-4">{text}</h2>);export default CardTitleCentered;

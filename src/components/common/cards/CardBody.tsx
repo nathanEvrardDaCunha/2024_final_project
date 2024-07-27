@@ -1,0 +1,1 @@
+import React from 'react';interface CardBodyProps {	children: React.ReactNode;}const CardBody: React.FC<CardBodyProps> = ({ children }) => (	<div className="card-body">		{children}	</div>);export default CardBody;
