@@ -1,0 +1,1 @@
+import React from 'react';interface WarningMessageProps {	message: string;}const WarningMessage: React.FC<WarningMessageProps> = ({ message }) => (	<p className="text-yellow-600 text-sm mt-1">{message}</p>);export default WarningMessage;
