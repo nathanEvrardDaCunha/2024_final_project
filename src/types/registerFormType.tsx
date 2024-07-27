@@ -1,0 +1,1 @@
+export interface FormData {	email: string;	firstname: string;	lastname: string;	birthDate: string;	password: string;	phoneNumber: string;}export interface FormErrors {	email?: string;	firstname?: string;	lastname?: string;	birthDate?: string;	password?: string;	phoneNumber?: string;}
