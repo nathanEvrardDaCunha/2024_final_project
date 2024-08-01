@@ -1,0 +1,1 @@
+export interface Location {	id: number;	title: string;	locationStatus: string;	locationType: string;	country: string;	pricePerNight: number;	user: {		firstname: string;		lastname: string;	};}
