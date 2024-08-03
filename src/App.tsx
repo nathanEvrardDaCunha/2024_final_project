@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Register from './pages/Register';
 import Login from './pages/Login';
@@ -7,6 +8,8 @@ import SuccesPageRenter from "./pages/SuccessPageRenter.tsx";
 import CanceledPageRenter from "./pages/CanceledPageRenter.tsx";
 import AdminLocations from "./pages/AdminLocations";
 import AdminLocationsReview from "./pages/AdminLocationsReview.ts.tsx";
+import PendingPublishLocations from "./pages/PendingPublishLocations.tsx";
+import PublishLocation from "./pages/PublishLocations.tsx";
 
 function App() {
     return (
@@ -22,6 +25,8 @@ function App() {
                     <Route path="/canceled" element={<CanceledPageRenter />} />
                     <Route path="/admin/locations" element={<AdminLocations />} />
                     <Route path="/admin/locations/:locationId/review" element={<AdminLocationsReview />} />
+                    <Route path="/locations/pending-publish" element={<PendingPublishLocations />} />
+                    <Route path="/locations/:locationId/publish" element={<PublishLocation />} />
                 </Routes>
             </div>
         </Router>
