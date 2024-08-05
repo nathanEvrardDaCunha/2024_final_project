@@ -12,6 +12,7 @@ import PendingPublishLocations from "./pages/PendingPublishLocations.tsx";
 import PublishLocation from "./pages/PublishLocations.tsx";
 import UserManagement from "./pages/UserManagement.tsx";
 import PublishedLocations from "./pages/PublishedLocations.tsx";
+import HomePage from "./pages/HomePage.tsx";
 
 function App() {
     return (
@@ -21,7 +22,7 @@ function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/" element={<Login />} />
+                    <Route path="/" element={<HomePage />} />
                     <Route path="/estimate" element={<EstimateLocation />} />
                     <Route path="/success" element={<SuccesPageRenter />} />
                     <Route path="/canceled" element={<CanceledPageRenter />} />
