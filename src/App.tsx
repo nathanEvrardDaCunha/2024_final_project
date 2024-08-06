@@ -13,6 +13,7 @@ import PublishLocation from "./pages/PublishLocations.tsx";
 import UserManagement from "./pages/UserManagement.tsx";
 import PublishedLocations from "./pages/PublishedLocations.tsx";
 import HomePage from "./pages/HomePage.tsx";
+import UserPublishedLocations from "./pages/UserPublishedLocation.tsx";
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                     <Route path="/locations/:locationId/publish" element={<PublishLocation />} />
                     <Route path="/user-management" element={<UserManagement />} />
                     <Route path="/locations" element={<PublishedLocations />} />
+                    <Route path="/my-published-locations" element={<UserPublishedLocations />} />
                 </Routes>
             </div>
         </Router>
