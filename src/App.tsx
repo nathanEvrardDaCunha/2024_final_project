@@ -14,6 +14,7 @@ import UserManagement from "./pages/UserManagement.tsx";
 import PublishedLocations from "./pages/PublishedLocations.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import UserPublishedLocations from "./pages/UserPublishedLocation.tsx";
+import UpdateLocation from "./pages/UpdateLocations.tsx";
 
 function App() {
     return (
@@ -31,6 +32,7 @@ function App() {
                     <Route path="/admin/locations/:locationId/review" element={<AdminLocationsReview />} />
                     <Route path="/locations/pending-publish" element={<PendingPublishLocations />} />
                     <Route path="/locations/:locationId/publish" element={<PublishLocation />} />
+                    <Route path="/locations/:locationId/update" element={<UpdateLocation />} />
                     <Route path="/user-management" element={<UserManagement />} />
                     <Route path="/locations" element={<PublishedLocations />} />
                     <Route path="/my-published-locations" element={<UserPublishedLocations />} />
