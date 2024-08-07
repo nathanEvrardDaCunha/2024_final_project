@@ -15,6 +15,7 @@ import PublishedLocations from "./pages/PublishedLocations.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import UserPublishedLocations from "./pages/UserPublishedLocation.tsx";
 import UpdateLocation from "./pages/UpdateLocations.tsx";
+import MembershipPage from "./pages/MembershipPage.tsx";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/membership" element={<MembershipPage />} />
                     <Route path="/" element={<HomePage />} />
                     <Route path="/estimate" element={<EstimateLocation />} />
                     <Route path="/success" element={<SuccesPageRenter />} />
