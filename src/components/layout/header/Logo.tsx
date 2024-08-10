@@ -1,0 +1,1 @@
+import React from 'react';import { Link } from 'react-router-dom';const Logo: React.FC = () => (	<Link to="/" className="btn btn-ghost text-xl">ParisJanitor</Link>);export default Logo;

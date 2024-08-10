@@ -1,0 +1,1 @@
+import React from 'react';interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {	children: React.ReactNode;}const Select: React.FC<SelectProps> = ({ children, ...props }) => {	return (		<select			className="select select-bordered w-full max-w-xs"			{...props}		>			{children}		</select>	);};export default Select;
