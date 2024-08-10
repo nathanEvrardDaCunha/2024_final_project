@@ -16,6 +16,7 @@ import HomePage from "./pages/HomePage.tsx";
 import UserPublishedLocations from "./pages/UserPublishedLocation.tsx";
 import UpdateLocation from "./pages/UpdateLocations.tsx";
 import MembershipPage from "./pages/MembershipPage.tsx";
+import LocationDetails from "./pages/LocationDetails.tsx"; // Add this import
 
 function App() {
     return (
@@ -38,6 +39,7 @@ function App() {
                     <Route path="/user-management" element={<UserManagement />} />
                     <Route path="/locations" element={<PublishedLocations />} />
                     <Route path="/my-published-locations" element={<UserPublishedLocations />} />
+                    <Route path="/locations/:id" element={<LocationDetails />} />
                 </Routes>
             </div>
         </Router>
