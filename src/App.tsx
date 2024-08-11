@@ -16,7 +16,8 @@ import HomePage from "./pages/HomePage.tsx";
 import UserPublishedLocations from "./pages/UserPublishedLocation.tsx";
 import UpdateLocation from "./pages/UpdateLocations.tsx";
 import MembershipPage from "./pages/MembershipPage.tsx";
-import LocationDetails from "./pages/LocationDetails.tsx"; // Add this import
+import LocationDetails from "./pages/LocationDetails.tsx";
+import ManageSubscription from "./pages/ManageSubscription.tsx"; // Add this import
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/membership" element={<MembershipPage />} />
+                    <Route path="/manage-subscription" element={<ManageSubscription />} />
                     <Route path="/" element={<HomePage />} />
                     <Route path="/estimate" element={<EstimateLocation />} />
                     <Route path="/success" element={<SuccesPageRenter />} />
