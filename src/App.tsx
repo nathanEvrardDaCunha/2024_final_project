@@ -19,7 +19,8 @@ import MembershipPage from "./pages/MembershipPage.tsx";
 import LocationDetails from "./pages/LocationDetails.tsx";
 import ManageSubscription from "./pages/ManageSubscription.tsx";
 import RentorReservations from "./pages/RentorReservations.tsx";
-import NotFound from "./pages/NotFound.tsx"; // Add this import
+import NotFound from "./pages/NotFound.tsx";
+import UserReservations from "./pages/UserReservations.tsx"; // Add this import
 
 function App() {
     return (
@@ -45,6 +46,7 @@ function App() {
                     <Route path="/my-published-locations" element={<UserPublishedLocations />} />
                     <Route path="/locations/:id" element={<LocationDetails />} />
                     <Route path="/locations/:id/rentor-reservations" element={<RentorReservations />} />
+                    <Route path="/my-reservations" element={<UserReservations />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </div>
