@@ -21,7 +21,8 @@ import ManageSubscription from "./pages/ManageSubscription.tsx";
 import RentorReservations from "./pages/RentorReservations.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import UserReservations from "./pages/UserReservations.tsx";
-import ServiceList from "./components/common/ServiceList.tsx"; // Add this import
+import ServiceList from "./components/common/ServiceList.tsx";
+import ReservationServices from "./components/ReservationServices.tsx"; // Add this import
 
 function App() {
     return (
@@ -49,6 +50,7 @@ function App() {
                     <Route path="/locations/:id/rentor-reservations" element={<RentorReservations />} />
                     <Route path="/my-reservations" element={<UserReservations />} />
                     <Route path="/services" element={<ServiceList />} />
+                    <Route path="/reservations/:reservationId/services" element={<ReservationServices />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </div>
