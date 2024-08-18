@@ -22,7 +22,8 @@ import RentorReservations from "./pages/RentorReservations.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import UserReservations from "./pages/UserReservations.tsx";
 import ServiceList from "./components/common/ServiceList.tsx";
-import ReservationServices from "./components/ReservationServices.tsx"; // Add this import
+import ReservationServices from "./components/ReservationServices.tsx";
+import LocationFinances from "./pages/LocationFinances.tsx"; // Add this import
 
 function App() {
     return (
@@ -47,6 +48,7 @@ function App() {
                     <Route path="/locations" element={<PublishedLocations />} />
                     <Route path="/my-published-locations" element={<UserPublishedLocations />} />
                     <Route path="/locations/:id" element={<LocationDetails />} />
+                    <Route path="/locations/:id/finances" element={<LocationFinances />} />
                     <Route path="/locations/:id/rentor-reservations" element={<RentorReservations />} />
                     <Route path="/my-reservations" element={<UserReservations />} />
                     <Route path="/services" element={<ServiceList />} />
