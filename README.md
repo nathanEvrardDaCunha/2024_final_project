@@ -19,7 +19,8 @@ To install the project, follow these steps:
 4. tar -xzvf frontendv1.tar.gz
 5. rm frontendv1.tar.gz
 6. sudo docker build -t vite-frontend .
-7. docker run vite-frontend
+7. docker run -p 4173:4173 vite-frontend
+
 
 
 
