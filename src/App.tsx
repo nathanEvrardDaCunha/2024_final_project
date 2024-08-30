@@ -40,7 +40,6 @@ function App() {
         <Router>
             <div className="App">
                 <Routes>
-                    {/* Public routes */}
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/" element={<HomePage />} />
@@ -48,35 +47,29 @@ function App() {
                     <Route path="/locations" element={<PublishedLocations />} />
                     <Route path="/locations/:id" element={<LocationDetails />} />
                     
-                    {/* Protected routes for all logged-in users */}
                     <Route path="/dashboard" element={<ProtectedRoute allowedRoles={['RENTER', 'FREE', 'BAGPACKER_MONTHLY', 'BAGPACKER_YEARLY', 'EXPLORATOR_MONTHLY', 'EXPLORATOR_YEARLY', 'ADMIN']}><Dashboard /></ProtectedRoute>} />
                     <Route path="/services" element={<ProtectedRoute allowedRoles={['RENTER', 'FREE', 'BAGPACKER_MONTHLY', 'BAGPACKER_YEARLY', 'EXPLORATOR_MONTHLY', 'EXPLORATOR_YEARLY', 'ADMIN']}><ServiceList /></ProtectedRoute>} />
                     <Route path="/my-reservations" element={<ProtectedRoute allowedRoles={['RENTER', 'FREE', 'BAGPACKER_MONTHLY', 'BAGPACKER_YEARLY', 'EXPLORATOR_MONTHLY', 'EXPLORATOR_YEARLY']}><UserReservations /></ProtectedRoute>} />
                     
-                    {/* Protected routes for RENTER */}
                     <Route path="/estimate" element={<ProtectedRoute allowedRoles={['RENTER']}><EstimateLocation /></ProtectedRoute>} />
                     <Route path="/my-published-locations" element={<ProtectedRoute allowedRoles={['RENTER']}><UserPublishedLocations /></ProtectedRoute>} />
                     <Route path="/locations/:id/rentor-reservations" element={<ProtectedRoute allowedRoles={['RENTER']}><RentorReservations /></ProtectedRoute>} />
                     <Route path="/locations/:id/finances" element={<ProtectedRoute allowedRoles={['RENTER']}><LocationFinances /></ProtectedRoute>} />
                     <Route path="/locations/:id/associated-services" element={<ProtectedRoute allowedRoles={['RENTER', "ADMIN"]}><AssociatedServices /></ProtectedRoute>} />
                     
-                    {/* Protected routes for subscribers */}
                     <Route path="/manage-subscription" element={<ProtectedRoute allowedRoles={['FREE', 'BAGPACKER_MONTHLY', 'BAGPACKER_YEARLY', 'EXPLORATOR_MONTHLY', 'EXPLORATOR_YEARLY']}><ManageSubscription /></ProtectedRoute>} />
                     
-                    {/* Protected routes for ADMIN */}
                     <Route path="/admin/locations" element={<ProtectedRoute allowedRoles={['ADMIN']}><AdminLocations /></ProtectedRoute>} />
                     <Route path="/admin/locations/:locationId/review" element={<ProtectedRoute allowedRoles={['ADMIN']}><AdminLocationsReviewTs /></ProtectedRoute>} />
                     <Route path="/locations/pending-publish" element={<ProtectedRoute allowedRoles={['ADMIN']}><PendingPublishLocations /></ProtectedRoute>} />
                     <Route path="/locations/:locationId/publish" element={<ProtectedRoute allowedRoles={['ADMIN']}><PublishLocation /></ProtectedRoute>} />
                     <Route path="/user-management" element={<ProtectedRoute allowedRoles={['ADMIN']}><UserManagement /></ProtectedRoute>} />
                     
-                    {/* Routes that might need protection (unsure based on the information provided) */}
                     <Route path="/success" element={<SuccesPageRenter />} />
                     <Route path="/canceled" element={<CanceledPageRenter />} />
                     <Route path="/locations/:locationId/update" element={<UpdateLocation />} />
                     <Route path="/reservations/:reservationId/services" element={<ReservationServices />} />
                     
-                    {/* Catch-all route for 404 */}
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </div>
